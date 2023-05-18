@@ -1,0 +1,21 @@
+.ad-wrapper{
+    width: 400px;
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid #0a0a0a;
+    box-shadow: 5px 5px 5px 5px #888888;
+}
+.banner{
+    height: 350px;
+    width: 100%;
+    background-color: #888888;
+}
+.avatar{
+    background-color: white;
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+    border: 2px solid #0a0a0a;
+    margin-top: -155px;
+    margin-left: 10px;
+}
