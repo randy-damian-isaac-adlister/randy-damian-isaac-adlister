@@ -23,7 +23,7 @@
                         <label for="password">Password</label>
                         <input id="password" name="password" class="form-control" type="password">
                     </div>
-                    <button type="submit" class="btn btn-primary big">Login</button>
+                    <button type="submit" class="btn btn-primary big custom-button">Login</button>
                     <span class="register">Need an account? <a class="link" href="/register"> Register for JobSeeker here</a></span>
                 </form>
             </div>
