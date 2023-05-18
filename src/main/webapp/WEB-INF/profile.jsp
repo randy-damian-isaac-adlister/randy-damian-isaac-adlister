@@ -16,7 +16,7 @@
         <div class="container">
             <div class="row">
                 <div class="banner">
-
+<%--                    <p>JS</p>--%>
                 </div>
             </div>
                 <div class="container">
