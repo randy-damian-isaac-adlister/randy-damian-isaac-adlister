@@ -29,7 +29,7 @@
                         </div>
                     </div>
                 </div>
-            <div class="row">
+            <div class="row profile-info">
                 <div class="column">
                     <div class="title">
                         <h1>Welcome, ${sessionScope.user.username}!</h1>
@@ -51,8 +51,8 @@
                 </div>
                 <div class="column align-right">
                     <div class="account-wrapper">
-                        <div class="account-title">
-                            <h2>My Account</h2>
+                        <div class="account-title-wrapper">
+                            <h2 class="account-title">My Account</h2>
                         </div>
                         <div class="account-info">
                             <p>Username: ${user.username}</p>
