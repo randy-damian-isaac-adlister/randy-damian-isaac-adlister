@@ -2,7 +2,7 @@
 
 body {
     background-color: darkslategrey;
-    font-family: 'Noto Sans', sans-serif;
+    font-family: 'Futura', sans-serif;
     font-size: 15px;
     font-weight: 400;
     line-height: 1.5;
@@ -17,9 +17,11 @@ body {
 .btn {
     background-color: darkseagreen;
 }
+
 .register {
     color: white;
 }
+
 .link {
     color: white;
 }
