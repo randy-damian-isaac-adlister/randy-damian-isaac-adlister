@@ -8,7 +8,7 @@
 </head>
 <body>
     <jsp:include page="/WEB-INF/partials/navbar.jsp" />
-    <div class="container" style="background-color:#4C4C6D ">
+    <div class="container" style="background-color:#4C4C6D; font-family: 'Rockwell', sans-serif">
         <h1  style="color:#E8F6EF;text-align:center";>Welcome to the JobSeeker</h1>
         <h4 style="color:#E8F6EF;text-align:center">Your Gateway to a new Career!</h4>
     </div>
