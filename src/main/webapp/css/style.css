@@ -14,12 +14,6 @@ body {
     color: #E8F6EF;
 }
 
-/*.btn {*/
-/*    background-color: #1B9C85;*/
-/*    color: white;*/
-/*    border: 2px solid #E8F6EF;*/
-/*}*/
-
 .custom-button {
     background-color: #1B9C85;
     border-color: #FFE194;
@@ -30,7 +24,6 @@ body {
     border-color: #E8F6EF;
 }
 
-
 .register {
     color: #E8F6EF;
 
@@ -39,7 +32,8 @@ body {
 .link {
     color: #E8F6EF;
 }
-        a:hover {
-            color: #FFE194;
-        }
+
+a:hover {
+color: #FFE194;
+}
 

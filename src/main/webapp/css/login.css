@@ -14,8 +14,14 @@ body {
     color: #E8F6EF;
 }
 
-.btn {
+.custom-button {
     background-color: #1B9C85;
+    border-color: #FFE194;
+}
+
+.custom-button:hover {
+    background-color:#4C4C6D;
+    border-color: #E8F6EF;
 }
 
 .register {
@@ -24,10 +30,10 @@ body {
 }
 
 .link {
-    color: white;
+    color: #E8F6EF;
 }
 
 a:hover {
-    color: hotpink;
+    color: #FFE194;
 }
 
