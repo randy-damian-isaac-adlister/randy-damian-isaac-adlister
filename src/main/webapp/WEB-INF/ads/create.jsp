@@ -14,8 +14,20 @@
                 <input id="title" name="title" class="form-control" type="text">
             </div>
             <div class="form-group">
+                <label for="location">Location</label>
+                <input id="location" name="location"type="text">
+                <label for="salary">Title</label>
+                <input id="salary" name="salary" type="text">
+                <label for="title">Title</label>
+                <input id="type" name="type" type="text">
+                <label for="type">Description</label>
+                <select name="shift" id="shift">
+                    <option value="day">Day-Shift</option>
+                    <option value="swings">Swing-Shift</option>
+                    <option value="night">Night-Shift</option>
+                </select>
                 <label for="description">Description</label>
-                <textarea id="description" name="description" class="form-control" type="text"></textarea>
+                <textarea id="description" name="description" type="text" rows="30" cols="70"></textarea>
             </div>
             <input type="submit" class="btn btn-block btn-primary">
         </form>
