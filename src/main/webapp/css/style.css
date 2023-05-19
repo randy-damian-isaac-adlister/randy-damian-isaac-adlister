@@ -84,6 +84,7 @@ body{
     postion: relative;
     background-color: var(--color-3);
     border-radius: 10px;
+    padding: 30px;
 }
 .account-title{
     font-size: 45px;

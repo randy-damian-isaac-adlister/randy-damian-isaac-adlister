@@ -38,7 +38,7 @@
                 </div>
                 <div class="">
                     <c:forEach var="ad" items="${ads}">
-                        <div class="ad-wrapper">
+                        <div class="ad-wrapper" data-id="${ad.id}">
                             <h2 class="ad-title">${ad.title}</h2>
                             <p class="ad-location">${ad.location}</p>
                             <p class="ad-salary">${ad.salary}</p>
@@ -52,31 +52,32 @@
                 </div>
                 <div class="editFormPopup">
                     <div class="overlay">
-                        <div class="popup">
-                            <form action="/ads/create" method="post" class="my-form">
-                                <div class="title">
-                                    <label for="title">Title</label>
-                                    <input id="title" name="title" class="edit-form" value="${ad.title}">
-                                </div>
-                                <div class="form-group">
-                                    <label for="location" class="form-label">Location</label>
-                                    <input id="location" name="location" type="text" class="form-input">
-                                    <label for="salary" class="form-label">Salary</label>
-                                    <input id="salary" name="salary" type="text" class="form-input">
-                                    <label for="type" class="form-label">Type</label>
-                                    <input id="type" name="type" type="text" class="form-input">
-                                    <select name="shift" id="shift" class="form-select">
-                                        <option value="day">Day-Shift</option>
-                                        <option value="swings">Swing-Shift</option>
-                                        <option value="night">Night-Shift</option>
-                                    </select>
-                                    <label for="description" class="form-label">Description</label>
-                                    <textarea id="description" name="description" type="text" rows="5" cols="70" class="form-textarea"></textarea>
-                                </div>
-                                <input type="submit" class="btn btn-block btn-primary">
-                            </form>
+                    </div>
+                    <div class="popup">
+                        <form action="ads/edit" method="post" class="my-form">
+                            <div class="title">
+                                <label for="title">Title</label>
+                                <input id="title" name="title" class="edit-form" value="${ad.title}">
+                            </div>
+                            <div class="form-group">
+                                <label for="location" class="form-label">Location</label>
+                                <input id="location" name="location" type="text" class="form-input">
+                                <label for="salary" class="form-label">Salary</label>
+                                <input id="salary" name="salary" type="text" class="form-input">
+                                <label for="type" class="form-label">Type</label>
+                                <input id="type" name="job_type" type="text" class="form-input">
+                                <select name="shift" id="shift" class="form-select">
+                                    <option value="day">Day-Shift</option>
+                                    <option value="swings">Swing-Shift</option>
+                                    <option value="night">Night-Shift</option>
+                                </select>
+                                <input id="ad-id" name="ad-id" type="hidden" value="">
+                                <label for="description" class="form-label">Description</label>
+                                <textarea id="description" name="description" type="text" rows="5" cols="70" class="form-textarea"></textarea>
+                            </div>
+                            <input type="submit" class="btn btn-block btn-primary">
+                        </form>
 
-                        </div>
                     </div>
                 </div>
             </div>
@@ -97,19 +98,33 @@
 </div>
 <script>
     const editForm = document.querySelector(".editFormPopup");
+    const formBg = editForm.querySelector(".overlay");
     const ads = document.querySelectorAll(".ad-wrapper");
-    ads.forEach((ad,i) => {
+    formBg.addEventListener("click", function() {
+        editForm.classList.toggle("show");
+    });
+    ads.forEach((ad) => {
         const editBtn = ad.querySelector(".editBtn");
         editBtn.addEventListener("click", function() {
-            editForm.style.opacity = "1";
-            editForm.style.cursor = "pointer";
+            editForm.classList.toggle("show");
             document.querySelector('#title').value = ad.querySelector("h2").innerText;
             document.querySelector('#description').value = ad.querySelector(".ad-description").innerText;
             document.querySelector('#location').value = ad.querySelector(".ad-location").innerText;
             document.querySelector('#salary').value = ad.querySelector(".ad-salary").innerText;
             document.querySelector('#type').value = ad.querySelector(".ad-job_type").innerText;
             document.querySelector('#shift').value = ad.querySelector(".ad-shift").innerText;
+            document.querySelector('#ad-id').value = ad.getAttribute("data-id");
         });
+        if(editForm.style.opacity === "1"){
+            document.addEventListener('click', function(event) {
+                const isClickedInsideForm = editForm.contains(event.target);
+
+                if (!isClickedInsideForm) {
+                    // Clicked outside the form, so close it
+                    editForm.style.opacity = "0";
+                }
+            });
+        }
     });
 </script>
 

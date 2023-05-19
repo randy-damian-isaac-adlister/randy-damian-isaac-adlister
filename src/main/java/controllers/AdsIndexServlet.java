@@ -1,6 +1,7 @@
 package controllers;
 
 import dao.DaoFactory;
+import models.Ad;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -15,4 +16,8 @@ public class AdsIndexServlet extends HttpServlet {
         request.setAttribute("ads", DaoFactory.getAdsDao().all());
         request.getRequestDispatcher("/WEB-INF/ads/index.jsp").forward(request, response);
     }
+//    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+//        DaoFactory.getAdsDao().editAd(ad);
+//        response.sendRedirect("/profile");
+//    }
 }
