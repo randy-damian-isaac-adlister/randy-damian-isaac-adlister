@@ -29,6 +29,24 @@ public class RegisterServlet extends HttpServlet {
         request.getSession().setAttribute("company", company);
         request.getSession().setAttribute("username", username);
         request.getSession().setAttribute("email", email);
+        User existingUser = DaoFactory.getUsersDao().findByUsername(username);
+
+        response.setContentType("text/html");
+        PrintWriter out = response.getWriter();
+
+
+        // condition to check if username already exists
+        if (existingUser != null){
+            out.println("<script type=\"text/javascript\">");
+            out.println("let form = document.querySelector(\".form-register\")");
+            out.println("let el = document.createElement('h4')");
+            out.println("el.innerHTML = Error: username already exists");
+            out.println("form.appendChild(el)");
+            out.println("console.log(\"test\")");
+            out.println("</script>");
+            response.sendRedirect("/register");
+            return;
+        }
 
         // validate input
         boolean inputHasErrors = username.isEmpty()
