@@ -1,3 +1,4 @@
+
 /*JobSeeker Login page*/
 
 body {
@@ -35,5 +36,58 @@ body {
 
 a:hover {
 color: #FFE194;
+}
+
+
+:root {
+    --color-1: #4C4C6D;
+    --color-2: #1B9C85;
+    --color-3: #E8F6EF;
+    --color-4: #FFE194;
+}
+body{
+    background-color: var(--color-1);
+
+}
+button{
+    background-color: var(--color-2);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    cursor: pointer;
+}
+.ad-wrapper{
+    background-color: var(--color-3);
+    width: 400px;
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid #0a0a0a;
+    box-shadow: 5px 5px 5px 5px #888888;
+    margin: 15px;
+}
+.banner{
+    height: 350px;
+    width: 100%;
+    background-color: var(--color-2);
+}
+.avatar{
+    background-color: white;
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+    border: 2px solid #0a0a0a;
+    margin-top: -155px;
+    margin-left: 10px;
+}
+.profile-info{
+    background-color: var(--color-3);
+    border-radius: 10px;
+}
+.account-title{
+    font-size: 45px;
+}
+.account-info{
+    font-size: 20px;
 }
 
