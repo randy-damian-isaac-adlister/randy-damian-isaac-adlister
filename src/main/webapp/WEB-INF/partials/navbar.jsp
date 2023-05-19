@@ -1,13 +1,11 @@
-<nav class="navbar navbar-default">
-    <div class="container-fluid">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-            <a class="navbar-brand" href="/ads">Adlister</a>
+<nav class="container-header">
+    <div class="header">
+        <div class="nav-header">
+            <h1 class="nav-brand" href="/ads">JobSeeker</h1>
         </div>
-        <ul class="nav navbar-nav navbar-right">
-            <li><a href="/login">Login</a></li>
-            <li><a href="/logout">Logout</a></li>
-        </ul>
-    </div><!-- /.navbar-collapse -->
-    </div><!-- /.container-fluid -->
+        <div class="nav-items">
+            <h4><a href="/login">Login</a></h4>
+            <h4><a href="/logout">Logout</a></h4>
+        </div>
+    </div>
 </nav>

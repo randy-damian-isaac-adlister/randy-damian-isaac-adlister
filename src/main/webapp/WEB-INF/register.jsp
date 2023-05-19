@@ -1,37 +1,44 @@
+
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
 <html>
 <head>
-    <jsp:include page="partials/head.jsp">
-        <jsp:param name="title" value="Register For Our Site!" />
-    </jsp:include>
+    <title>Register to JobSeeker</title>
+    <link rel="stylesheet" href="/css/register.css">
+    <link rel="stylesheet" href="/css/nav.css">
 </head>
 <body>
     <jsp:include page="partials/navbar.jsp" />
     <div class="container">
-        <h1>Please fill in your information.</h1>
-        <form action="/register" method="post">
-            <div class="form-group">
-                <label for="company">Company Name</label>
-                <input id="company" name="company" type="text">
+        <div class="row">
+            <div class="register-card">
+                <h2>Please fill in the required information</h2>
+                <form action="/register" method="post" class="register-form">
+                    <div class="form-el">
+                        <label for="company">Company Name</label>
+                        <input id="company" name="company" type="text">
+                    </div>
+                    <div class="form-el">
+                        <label for="username">Username</label>
+                        <input id="username" name="username" type="text">
+                    </div>
+                    <div class="form-el">
+                        <label for="email">Email</label>
+                        <input id="email" name="email" type="text" value="${param.email}" >
+                    </div>
+                    <div class="form-el">
+                        <label for="password">Password</label>
+                        <input type="password" name="password" id="password" value="">
+
+                    </div>
+                    <div class="form-el">
+                        <label for="confirm_password">Confirm Password</label>
+                        <input id="confirm_password" name="confirm_password" type="password">
+                    </div>
+                    <input type="submit" class="submit-btn" value="Register">
+                </form>
             </div>
-            <div class="form-group">
-                <label for="username">Username</label>
-                <input id="username" name="username" type="text">
-            </div>
-            <div class="form-group">
-                <label for="email">Email</label>
-                <input id="email" name="email" type="text">
-            </div>
-            <div class="form-group">
-                <label for="password">Password</label>
-                <input id="password" name="password" type="password">
-            </div>
-            <div class="form-group">
-                <label for="confirm_password">Confirm Password</label>
-                <input id="confirm_password" name="confirm_password" type="password">
-            </div>
-            <input type="submit" class="btn btn-primary btn-block">
-        </form>
+        </div>
     </div>
 </body>
 </html>
