@@ -4,6 +4,7 @@ import models.Ad;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 public class ListAdsDao implements Ads {
     private List<Ad> ads;
@@ -32,6 +33,16 @@ public class ListAdsDao implements Ads {
         List<Ad> userAds = new ArrayList<>();
         for (Ad ad : all()) {
             if (ad.getUserId() == id) {
+                userAds.add(ad);
+            }
+        }
+        return userAds;
+    }
+
+    public List<Ad> searchAdsByTitle(String search) {
+        List<Ad> userAds = new ArrayList<>();
+        for (Ad ad : all()) {
+            if (ad.getTitle().contains(search)) {
                 userAds.add(ad);
             }
         }
