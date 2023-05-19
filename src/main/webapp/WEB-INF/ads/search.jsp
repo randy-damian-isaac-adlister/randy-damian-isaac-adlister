@@ -10,7 +10,6 @@
 </head>
 <body>
 <%--<jsp:include page="/WEB-INF/ads/search.jsp"/>--%>
-
 <div class="page-wrapper">
     <div class="container">
         <div class="row">
@@ -23,11 +22,10 @@
                     <h1>You are searching for:
                     <c:out value="${search}"/></h1>
                 </c:if>
-
                 <c:forEach var="ad" items="${adsByTitle}">
                     <!-- Display ad information here -->
                     <h2><c:out value="${ad.title}"/></h2>
-                    <!-- Add more fields as required -->
+                        <!-- Add more fields as required -->
                 </c:forEach>
 
                 <form action="${pageContext.request.contextPath}/search" method="POST">

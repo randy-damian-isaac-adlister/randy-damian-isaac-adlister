@@ -9,8 +9,8 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.awt.*;
 import java.io.IOException;
+import java.util.List;
 
 
 @WebServlet(name = "controllers.SearchServlet", urlPatterns = "/search")
@@ -21,7 +21,9 @@ public class SearchServlet extends HttpServlet {
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String search = request.getParameter("search");
-        request.setAttribute("adsByTile", DaoFactory.getAdsDao().searchAdsByTitle(search)); // Perform the search
+        List<Ad> ads = DaoFactory.getAdsDao().searchAdsByTitle(search);
+        request.setAttribute("adsByTitle", ads); // Perform the search
+        System.out.println("Number of ads found: " + ads.size());
         request.getRequestDispatcher("/WEB-INF/ads/search.jsp").forward(request, response);
     }
 }
