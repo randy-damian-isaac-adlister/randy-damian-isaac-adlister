@@ -16,15 +16,15 @@
                 <form action="/register" method="post" class="register-form">
                     <div class="form-el">
                         <label for="company">Company Name</label>
-                        <input id="company" name="company" type="text">
+                        <input id="company" name="company" type="text" value="${sessionScope.company}">
                     </div>
                     <div class="form-el">
                         <label for="username">Username</label>
-                        <input id="username" name="username" type="text">
+                        <input id="username" name="username" type="text" value="${sessionScope.username}">
                     </div>
                     <div class="form-el">
                         <label for="email">Email</label>
-                        <input id="email" name="email" type="text" value="${param.email}" >
+                        <input id="email" name="email" type="text" value="${sessionScope.email}" >
                     </div>
                     <div class="form-el">
                         <label for="password">Password</label>
