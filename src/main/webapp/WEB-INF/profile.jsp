@@ -7,6 +7,7 @@
     </jsp:include>
     <link rel="stylesheet" type="text/css" href="../css/layout.css">
     <link rel="stylesheet" type="text/css" href="../css/resets.css">
+    <link rel="stylesheet" type="text/css" href="../css/profile.css">
     <link rel="stylesheet" type="text/css" href="../css/style.css">
 </head>
 <body>
@@ -38,14 +39,46 @@
                 <div class="">
                     <c:forEach var="ad" items="${ads}">
                         <div class="ad-wrapper">
-                            <h2>${ad.title}</h2>
-                            <p>${ad.description}</p>
-                            <button class="button">Edit</button>
-                            <button class="button">Delete</button>
+                            <h2 class="ad-title">${ad.title}</h2>
+                            <p class="ad-location">${ad.location}</p>
+                            <p class="ad-salary">${ad.salary}</p>
+                            <p class="ad-job_type">${ad.job_type}</p>
+                            <p class="ad-shift">${ad.shift}</p>
+                            <p class="ad-description">${ad.description}</p>
+                            <button class="editBtn">Edit</button>
+                            <button class="deleteBtn">Delete</button>
                         </div>
                     </c:forEach>
                 </div>
+                <div class="editFormPopup">
+                    <div class="overlay">
+                        <div class="popup">
+                            <form action="/ads/create" method="post" class="my-form">
+                                <div class="title">
+                                    <label for="title">Title</label>
+                                    <input id="title" name="title" class="edit-form" value="${ad.title}">
+                                </div>
+                                <div class="form-group">
+                                    <label for="location" class="form-label">Location</label>
+                                    <input id="location" name="location" type="text" class="form-input">
+                                    <label for="salary" class="form-label">Salary</label>
+                                    <input id="salary" name="salary" type="text" class="form-input">
+                                    <label for="type" class="form-label">Type</label>
+                                    <input id="type" name="type" type="text" class="form-input">
+                                    <select name="shift" id="shift" class="form-select">
+                                        <option value="day">Day-Shift</option>
+                                        <option value="swings">Swing-Shift</option>
+                                        <option value="night">Night-Shift</option>
+                                    </select>
+                                    <label for="description" class="form-label">Description</label>
+                                    <textarea id="description" name="description" type="text" rows="5" cols="70" class="form-textarea"></textarea>
+                                </div>
+                                <input type="submit" class="btn btn-block btn-primary">
+                            </form>
 
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="column align-right">
                 <div class="account-wrapper">
@@ -62,6 +95,23 @@
         </div>
     </div>
 </div>
+<script>
+    const editForm = document.querySelector(".editFormPopup");
+    const ads = document.querySelectorAll(".ad-wrapper");
+    ads.forEach((ad,i) => {
+        const editBtn = ad.querySelector(".editBtn");
+        editBtn.addEventListener("click", function() {
+            editForm.style.opacity = "1";
+            editForm.style.cursor = "pointer";
+            document.querySelector('#title').value = ad.querySelector("h2").innerText;
+            document.querySelector('#description').value = ad.querySelector(".ad-description").innerText;
+            document.querySelector('#location').value = ad.querySelector(".ad-location").innerText;
+            document.querySelector('#salary').value = ad.querySelector(".ad-salary").innerText;
+            document.querySelector('#type').value = ad.querySelector(".ad-job_type").innerText;
+            document.querySelector('#shift').value = ad.querySelector(".ad-shift").innerText;
+        });
+    });
+</script>
 
 </body>
 </html>
