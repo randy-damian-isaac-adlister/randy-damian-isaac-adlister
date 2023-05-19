@@ -1,3 +1,4 @@
+
 <nav class="container-header">
     <div class="header">
         <div class="nav-header">
@@ -6,6 +7,7 @@
         <div class="nav-items">
             <h4><a href="/login">Login</a></h4>
             <h4><a href="/logout">Logout</a></h4>
+            <h4><a href="/register">Register</a></h4>
         </div>
     </div>
 </nav>
