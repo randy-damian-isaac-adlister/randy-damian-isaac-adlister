@@ -19,8 +19,7 @@
 
             </div>
         </div>
-        <div class="container">
-            <div class="row">
+            <div class="row left">
                 <div class="column shrink">
                     <div class="avatar"></div>
                 </div>
@@ -28,7 +27,6 @@
                     <button class="">Edit Profile</button>
                 </div>
             </div>
-        </div>
         <div class="row profile-info">
             <div class="column">
                 <div class="title">
