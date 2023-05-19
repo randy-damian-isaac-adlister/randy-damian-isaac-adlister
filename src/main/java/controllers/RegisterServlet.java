@@ -10,6 +10,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.io.PrintWriter;
+
+import static java.lang.System.out;
 
 @WebServlet(name = "controllers.RegisterServlet", urlPatterns = "/register")
 public class RegisterServlet extends HttpServlet {
@@ -46,5 +49,6 @@ public class RegisterServlet extends HttpServlet {
 
         DaoFactory.getUsersDao().insert(user);
         response.sendRedirect("/login");
+
     }
 }
