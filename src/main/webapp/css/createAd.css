@@ -1,0 +1,87 @@
+:root {
+    --color-1: #4C4C6D;
+    --color-2: #1B9C85;
+    --color-3: #E8F6EF;
+    --color-4: #FFE194;
+}
+
+body {
+    background-color: var(--color-1);
+    color: var(--color-1);
+}
+
+.container {
+    background-color: var(--color-4);
+    padding: 20px;
+    border-radius: 5px;
+    width: 400px;
+    margin: 50px auto 0;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: var(--color-2);
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    color: var(--color-2);
+}
+
+input{
+    width: 100%;
+    padding: 10px;
+    border-radius: 3px;
+    border: 1px solid var(--color-1);
+    transition: border-color 0.3s ease;
+}
+
+.form-control,
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 3px;
+    border: 1px solid var(--color-1);
+    transition: border-color 0.3s ease;
+}
+
+.form-control:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: var(--color-2);
+}
+
+select {
+    appearance: none;
+    background-position: right 8px center;
+    background-size: 12px 8px;
+    padding-right: 25px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 3px;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: var(--color-2);
+}

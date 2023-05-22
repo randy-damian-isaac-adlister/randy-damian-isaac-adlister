@@ -94,5 +94,6 @@ public class RegisterServlet extends HttpServlet {
         if (email == null)
             return false;
         return pat.matcher(email).matches();
+
     }
 }
