@@ -8,23 +8,36 @@
     <link rel="stylesheet" href="/css/nav.css">
 </head>
 <body>
-    <jsp:include page="partials/navbar.jsp" />
+
     <div class="container">
         <div class="row">
+            <div class="error ${sessionScope.error}">
+                <p>${sessionScope.emailError}</p>
+                <p>${sessionScope.emptyUsername}</p>
+                <p>${sessionScope.emptyEmail}</p>
+                <p>${sessionScope.emptyPassword}</p>
+                <p>${sessionScope.noMatch}</p>
+            </div>
             <div class="register-card">
-                <h2>Please fill in the required information</h2>
+                <div class="reg-left">
+                    <h2>JobSeeker</h2>
+                    <p>A central hub to find a career and change your life.</p>
+                    <img src="/css/images/pngegg.png" alt="business people"/>
+                </div>
                 <form action="/register" method="post" class="register-form">
+                    <h2>Sign up to JobSeeker</h2>
+                    <p>Already a member? <a href="/login">Login</a></p>
                     <div class="form-el">
                         <label for="company">Company Name</label>
-                        <input id="company" name="company" type="text">
+                        <input id="company" name="company" type="text" value="${sessionScope.company}">
                     </div>
                     <div class="form-el">
                         <label for="username">Username</label>
-                        <input id="username" name="username" type="text">
+                        <input id="username" name="username" type="text" value="${sessionScope.username}">
                     </div>
                     <div class="form-el">
                         <label for="email">Email</label>
-                        <input id="email" name="email" type="text" value="${param.email}" >
+                        <input id="email" name="email" type="text" value="${sessionScope.email}" >
                     </div>
                     <div class="form-el">
                         <label for="password">Password</label>
@@ -37,6 +50,7 @@
                     </div>
                     <input type="submit" class="submit-btn" value="Register">
                 </form>
+
             </div>
         </div>
     </div>

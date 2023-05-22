@@ -1,9 +1,15 @@
-
+body {
+    position: relative;
+    z-index: -4;
+}
 .container {
+    position: relative;
+    z-index: -2;
+    font-family: Rockwell, 'sans-serif';
     display: flex;
     justify-content: center;
     height: 100vh;
-    background-color: #1B9C85;
+    background-color: #4C4C6D;
 }
 
 .row {
@@ -14,12 +20,14 @@
 
 .register-card {
     display: flex;
-    flex-direction: column;
     align-items: center;
-    width: 40vw;
-    height: fit-content;
+    width: 800px;
+    height: 600px;
     border: 1px solid black;
     border-radius: 10px;
+    padding-left: 40px;
+    background-color: rgba(27, 156, 133);
+    box-shadow: 10px 10px 30px 10px black;
 }
 
 .register-form {
@@ -30,18 +38,39 @@
     width: 70%;
 }
 
+.register-form > h2 {
+    margin-bottom: 0;
+}
+
+a {
+    color: blue;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.register-form > p {
+    margin-top: 0;
+    color: rgba(0, 0, 0, 0.3);
+    font-size: 13px;
+}
+
 .form-el {
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: 70%;
+}
+
+.form-el > label {
+    font-size: 13px;
 }
 
 .submit-btn {
     width: 200px;
     height: 40px;
+    background-color: #4C4C6D;
     border: 1px solid black;
     border-radius: 8px;
-    box-shadow: rgba(100, 100, 111, 0.2) 0 3px 8px 0;
+    box-shadow: 2px 2px 4px black;
     margin-top: 10px;
     cursor: pointer;
 }
@@ -51,4 +80,83 @@
     height: 35px;
     border-radius: 6px;
     font-size: 15px;
+    background-color: rgba(27, 156, 133, 0.1);
+    box-shadow: 2px 2px 4px black;
+}
+
+.form-el > input:active {
+    background-color: rgba(27, 156, 133, 0.1);
+}
+.form-el > input:focus {
+    outline: none;
+    background-color: rgba(27, 156, 133, 0.1);
+    -webkit-appearance: none;
+}
+
+.error {
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    background-color: white;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 320px;
+    height: fit-content;
+    border: 1px solid black;
+    border-radius: 10px;
+    box-shadow: 4px 4px 12px 4px black;
+}
+
+.error > p {
+    opacity: 0;
+    color: red;
+    font-size: 12px;
+    animation: fade-in .3s ease-in .2s 1;
+    animation-fill-mode: forwards;
+}
+
+.has {
+    animation: slide-over .6s 1;
+    animation-fill-mode: forwards;
+}
+
+.error > h4 {
+    color: red;
+    margin: 10px;
+}
+
+img {
+    width: 340px;
+    padding-top: 40px;
+    padding-bottom: 50px;
+}
+
+.reg-left > p{
+    color: rgba(0, 0, 0, 0.3);
+}
+
+@keyframes slide-over {
+    0% {
+        top: 50%;
+        left: 50%;
+        opacity: 0;
+    }
+
+    100% {
+        top: 15%;
+        left: 85%;
+        opacity: 1;
+        z-index: 2;
+    }
+}
+
+@keyframes fade-in {
+    0% { opacity: 0}
+
+    100%{ opacity: 1}
+
 }
