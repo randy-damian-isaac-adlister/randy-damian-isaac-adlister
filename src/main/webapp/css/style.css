@@ -1,52 +1,53 @@
 
 /*JobSeeker Login page*/
 
-body {
-    background-color: #4C4C6D;
-    font-family: 'Rockwell', sans-serif;
-    font-size: 15px;
-    font-weight: 400;
-    line-height: 1.5;
-    color: #656b67;
-    -webkit-font-smoothing: antialiased;
-}
+/*body {*/
+/*    background-color: #4C4C6D;*/
+/*    font-family: 'Rockwell', sans-serif;*/
+/*    font-size: 15px;*/
+/*    font-weight: 400;*/
+/*    line-height: 1.5;*/
+/*    color: #656b67;*/
+/*    -webkit-font-smoothing: antialiased;*/
+/*}*/
 
-.container {
-    display: flex;
-    margin-top: 70px;
-    align-items: center;
-    justify-content: center;
-    background-color: #4C4C6D;
-}
+/*.container {*/
+/*    display: flex;*/
+/*    margin-top: 70px;*/
+/*    align-items: center;*/
+/*    justify-content: center;*/
+/*    background-color: #4C4C6D;*/
+/*}*/
 
-.form-group {
-    color: #E8F6EF;
+/*.form-group {*/
+/*    color: #E8F6EF;*/
+/*    height: 40px;*/
 
-}
+/*}*/
 
-.custom-button {
-    background-color: #1B9C85;
-    border: 2px solid white;
-}
+/*.custom-button {*/
+/*    background-color: #1B9C85;*/
+/*    border: 2px solid white;*/
+/*}*/
 
-.custom-button:hover {
-    background-color:#FFE194;
-    color: black;
-    border: 2px solid white;
-}
+/*.custom-button:hover {*/
+/*    background-color:#FFE194;*/
+/*    color: black;*/
+/*    border: 2px solid white;*/
+/*}*/
 
-.register {
-    color: #E8F6EF;
+/*.register {*/
+/*    color: #E8F6EF;*/
 
-}
+/*}*/
 
-.link {
-    color: #E8F6EF;
-}
+/*.link {*/
+/*    color: #E8F6EF;*/
+/*}*/
 
-a:hover {
-color: #FFE194;
-}
+/*a:hover {*/
+/*color: #FFE194;*/
+/*}*/
 
 :root {
     --color-1: #4C4C6D;
