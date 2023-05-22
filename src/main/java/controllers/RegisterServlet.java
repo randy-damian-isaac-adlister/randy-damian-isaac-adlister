@@ -51,7 +51,22 @@ public class RegisterServlet extends HttpServlet {
         user.setPassword(hash);
 
         DaoFactory.getUsersDao().insert(user);
-        response.sendRedirect("/login");
+
+// email validity check
+        if (emailIsValid(email) && !email.isEmpty() && !username.isEmpty() && !password.isEmpty() && passwordConfirm ){
+            response.sendRedirect("/login");
+        }
+
+    }
+    public static boolean emailIsValid (String email) {
+        String emailRegex = "^[a-zA-Z0-9_+&*-]+(?:\\."+
+                "[a-zA-Z0-9_+&*-]+)*@" +
+                "(?:[a-zA-Z0-9-]+\\.)+[a-z" +
+                "A-Z]{2,7}$";
+        Pattern pat = Pattern.compile(emailRegex);
+        if (email == null)
+            return false;
+        return pat.matcher(email).matches();
 
     }
 }
