@@ -1,4 +1,4 @@
-.editFormPopup{
+.editFormPopup, .editFormPopupProfile, .deleteFormPopup{
     pointer-events: none;
     opacity: 0;
     width: 100vw;
@@ -16,7 +16,15 @@
     opacity: 1;
     pointer-events: all;
 }
-.overlay {
+.editFormPopupProfile.show {
+    opacity: 1;
+    pointer-events: all;
+}
+.deleteFormPopup.show {
+    opacity: 1;
+    pointer-events: all;
+}
+.overlay, .overlayProfile, .overlayDelete{
     position: absolute;
     top: 0;
     left: 0;
@@ -83,4 +91,10 @@
 
 .my-form .btn:hover {
     background-color: #0c483d;
+}
+.form-label{
+    color: var(--color-2);
+}
+.create-ad-link{
+    color: var(--color-2);
 }
