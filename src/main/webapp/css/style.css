@@ -59,7 +59,7 @@ body{
     background-color: var(--color-1);
 
 }
-.editBtn, .deleteBtn{
+.editBtn, .deleteBtn, .editProfileBtn{
     background-color: var(--color-2);
     color: white;
     border: none;
@@ -79,21 +79,34 @@ body{
 .banner{
     height: 350px;
     width: 100%;
-    background-color: var(--color-2);
+}
+.banner-image{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
 }
 .avatar{
-    background-color: white;
     height: 250px;
     width: 250px;
     border-radius: 50%;
     border: 2px solid #0a0a0a;
     margin-top: -155px;
     margin-left: 10px;
+    overflow: hidden;
+    position: relative;
 }
+.avatar img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+
 .profile-info{
     postion: relative;
     background-color: var(--color-3);
     border-radius: 10px;
+    padding: 30px;
 }
 .account-title{
     font-size: 45px;

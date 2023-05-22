@@ -12,6 +12,7 @@ public interface Ads {
     // get a list of all the ads for a given user
     List<Ad> getUserAds(long id);
 
+
     List<Ad> searchAdsByTitle(String search);
 
     List<Ad> searchAdsByLocation(String location);
@@ -23,4 +24,11 @@ public interface Ads {
     List<Ad> searchAdsByShift(String shift);
 
     List<Ad> searchAdsByDescription(String description);
+
+    void editAd(Ad ad);
+
+    Ad findAdById(long adId);
+
+    void deleteAd(Ad ad);
+
 }

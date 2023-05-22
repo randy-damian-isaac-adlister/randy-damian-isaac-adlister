@@ -1,11 +1,41 @@
-.editFormPopup{
-    margin-top: -430px;
-    margin-left: 150px;
-    cursor: none;
+.editFormPopup, .editFormPopupProfile, .deleteFormPopup{
+    pointer-events: none;
     opacity: 0;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    left: 0;
     background-color: rgba(0, 0, 0, 0.5);
+    transition: opacity ease .3s;
+}
+.editFormPopup.show {
+    opacity: 1;
+    pointer-events: all;
+}
+.editFormPopupProfile.show {
+    opacity: 1;
+    pointer-events: all;
+}
+.deleteFormPopup.show {
+    opacity: 1;
+    pointer-events: all;
+}
+.overlay, .overlayProfile, .overlayDelete{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,0.5);
+    cursor: pointer;
+}
+.popup {
+    position: relative;
+    z-index:1;
 }
 .edit-form{
     background-color: var(--color-3);
@@ -15,6 +45,11 @@
     border: 2px solid #0a0a0a;
     box-shadow: 5px 5px 5px 5px #888888;
     margin: 15px;
+    transform: translateY(-300px);
+    transition: transform ease .3s;
+}
+.show .edit-form {
+    transform: translateY(0);
 }
 .my-form {
     margin: 20px;
@@ -56,4 +91,10 @@
 
 .my-form .btn:hover {
     background-color: #0c483d;
+}
+.form-label{
+    color: var(--color-2);
+}
+.create-ad-link{
+    color: var(--color-2);
 }
