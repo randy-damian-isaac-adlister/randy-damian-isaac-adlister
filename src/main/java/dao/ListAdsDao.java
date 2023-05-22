@@ -100,7 +100,7 @@ public class ListAdsDao implements Ads {
             }
         }
         return userAds;
-
+    }
     @Override
     public void editAd(Ad ad) {
 
