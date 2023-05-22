@@ -1,4 +1,5 @@
 body {
+    background-color: #1B9C85;
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -8,9 +9,10 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 70px;
-    background-color: #4C4C6D;
+    height: 150px;
+    background-color: #FFE194;
     border-bottom: 1px solid black;
+    color: #E8F6EF;
 }
 
 .header {
@@ -19,10 +21,18 @@ body {
     align-items: center;
     width: 90%;
 }
-
 .nav-items {
     display: flex;
     column-gap: 20px;
+    font-size: 20px;
+    font-family: Rockwell, sans-serif;
+    color: #E8F6EF;
+
+}
+.nav-brand {
+    color: #E8F6EF;
+    font-size: 50px;
+
 }
 
 
