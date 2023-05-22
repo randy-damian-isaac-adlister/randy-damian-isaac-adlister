@@ -73,6 +73,7 @@ a {
     box-shadow: 2px 2px 4px black;
     margin-top: 10px;
     cursor: pointer;
+    color: white;
 }
 
 .form-el > input {

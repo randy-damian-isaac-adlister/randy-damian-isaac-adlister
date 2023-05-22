@@ -24,7 +24,7 @@
                     <p>A central hub to find a career and change your life.</p>
                     <img src="/css/images/pngegg.png" alt="business people"/>
                 </div>
-                <form action="/register" method="post" class="register-form">
+                <form action="${pageContext.request.contextPath}/register" method="post" class="register-form">
                     <h2>Sign up to JobSeeker</h2>
                     <p>Already a member? <a href="/login">Login</a></p>
                     <div class="form-el">
