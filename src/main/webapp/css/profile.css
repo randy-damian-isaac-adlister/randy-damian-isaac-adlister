@@ -1,0 +1,86 @@
+.editFormPopup{
+    pointer-events: none;
+    opacity: 0;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: opacity ease .3s;
+}
+.editFormPopup.show {
+    opacity: 1;
+    pointer-events: all;
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,0.5);
+    cursor: pointer;
+}
+.popup {
+    position: relative;
+    z-index:1;
+}
+.edit-form{
+    background-color: var(--color-3);
+    width: 400px;
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid #0a0a0a;
+    box-shadow: 5px 5px 5px 5px #888888;
+    margin: 15px;
+    transform: translateY(-300px);
+    transition: transform ease .3s;
+}
+.show .edit-form {
+    transform: translateY(0);
+}
+.my-form {
+    margin: 20px;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.my-form .title {
+    margin-bottom: 15px;
+}
+
+.my-form .form-label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.my-form .form-input,
+.my-form .form-select,
+.my-form .form-textarea {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.my-form .btn {
+    width: 100%;
+    padding: 10px;
+    background-color: var(--color-2);
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.my-form .btn:hover {
+    background-color: #0c483d;
+}

@@ -1,7 +1,7 @@
 /*JobSeeker Login page*/
 
 body {
-    background-color: #4C4C6D;
+    background-color: #FFE194;
     font-family: 'Rockwell', sans-serif;
     font-size: 15px;
     font-weight: 400;
@@ -20,7 +20,7 @@ body {
 }
 
 .custom-button:hover {
-    background-color:#4C4C6D;
+    background-color:#FFE194;
     border-color: #E8F6EF;
 }
 
