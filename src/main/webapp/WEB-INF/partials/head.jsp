@@ -1,2 +1,3 @@
 <title>${param.title}</title>
-<link href="/css/nav.css" rel="stylesheet" >
+<link href="${pageContext.request.contextPath}/css/nav.css" rel="stylesheet" >
+
