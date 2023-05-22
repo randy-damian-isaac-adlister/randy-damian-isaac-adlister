@@ -75,7 +75,7 @@ public class RegisterServlet extends HttpServlet {
         user.setPassword(hash);
 
         DaoFactory.getUsersDao().insert(user);
-
+// email validity check
         if (emailIsValid(email) && !email.isEmpty() && !username.isEmpty() && !password.isEmpty() && passwordConfirm ){
             response.sendRedirect("/login");
         }
