@@ -18,6 +18,7 @@ public class ProfileEditServlet extends HttpServlet {
         User user = DaoFactory.getUsersDao().findByID(request.getParameter("user-id"));
         user.setUsername(request.getParameter("username"));
         user.setEmail(request.getParameter("email"));
+        user.setCompany_name(request.getParameter("company_name"));
         DaoFactory.getUsersDao().editUser(user);
         request.getSession().setAttribute("user", user);
         response.sendRedirect("/profile");
