@@ -13,4 +13,14 @@ public interface Ads {
     List<Ad> getUserAds(long id);
 
     List<Ad> searchAdsByTitle(String search);
+
+    List<Ad> searchAdsByLocation(String location);
+
+    List<Ad> searchAdsBySalary(String salary);
+
+    List<Ad> searchAdsByJob_type(String job_type);
+
+    List<Ad> searchAdsByShift(String shift);
+
+    List<Ad> searchAdsByDescription(String description);
 }
