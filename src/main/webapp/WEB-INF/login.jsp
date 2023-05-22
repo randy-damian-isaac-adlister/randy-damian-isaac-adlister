@@ -4,15 +4,11 @@
     <jsp:include page="/WEB-INF/partials/head.jsp">
         <jsp:param name="title" value="JobSeeker Login" />
     </jsp:include>
-
-<%--    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css">--%>
-
 <%--    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/login.css">--%>
-
     <link rel="stylesheet" type="text/css" href="../css/layout.css">
     <link rel="stylesheet" type="text/css" href="../css/resets.css">
     <link rel="stylesheet" type="text/css" href="../css/style.css">
-
+<%--    <link rel="stylesheet" href="../css/login.css">--%>
 </head>
 <body>
 <div class="page-wrapper">
