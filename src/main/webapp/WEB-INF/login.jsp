@@ -26,7 +26,7 @@
                         <label for="password">Password </label>
                         <input id="password" name="password" class="form-control" type="password">
                     </div>
-                    <span class="register">Need an account? Sign up to JobSeeker <a class="here">here</a></span>
+                    <span class="register">Need an account? Sign up to JobSeeker <a href="/register" class="here">here</a></span>
                     <button type="submit" class="login-btn">Login</button>
                 </form>
             </div>
