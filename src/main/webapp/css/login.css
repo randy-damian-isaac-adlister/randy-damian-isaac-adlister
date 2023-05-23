@@ -1,24 +1,22 @@
 /*JobSeeker Login page*/
 
 body {
-    background-color: #FFE194;
     font-family: 'Rockwell', sans-serif;
     font-size: 15px;
     font-weight: 400;
     line-height: 1.5;
-    color: #E8F6EF;
-    margin: 25px 25px;
+
     -webkit-font-smoothing: antialiased;
 }
 
-.container {
-    padding: 15px;
-    background-color: #4C4C6D;
-    line-height: 1.5;
+.page-wrapper {
+    align-items: center;
+    justify-content: center;
 }
 
 .form-group {
-    padding: 15px;
+    display: flex;
+    flex-direction: column;
 }
 
 .custom-button {
@@ -35,16 +33,70 @@ body {
 
 }
 
-.register {
-    color: #E8F6EF;
+.column.login {
+    border: 1px solid black;
+    width: 550px;
+    height: 350px;
+    row-gap: 10px;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    background-color: rgba(27, 156, 133);
+    box-shadow: 6px 6px 20px 6px black;
+    border-radius: 8px;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 10px;
+}
+
+.login-form > span {
+    margin-top: 0;
+    color: rgba(0, 0, 0, 0.4);
+    font-size: 13px;
+}
+
+.form-group > label {
+    font-size: 13px;
+}
+
+.form-group > input {
+    width: 350px;
+    border: 1px solid black;
+    height: 35px;
+    border-radius: 6px;
+    font-size: 15px;
+    background-color: rgba(27, 156, 133, 0.1);
+    box-shadow: 2px 2px 4px black;
+}
+
+.form-group > input:active {
+    background-color: rgba(27, 156, 133, 0.1);
+}
+.form-group > input:focus {
+    outline: none;
+    background-color: rgba(27, 156, 133, 0.1);
+    -webkit-appearance: none;
+}
+
+
+.login-btn {
+    width: 200px;
+    height: 40px;
+    background-color: #4C4C6D;
+    border: 1px solid black;
+    border-radius: 8px;
+    box-shadow: 2px 2px 4px black;
+    margin-top: 10px;
+    cursor: pointer;
+    color: white;
 
 }
 
-.link {
-    color: hotpink;
-}
-
-a:hover {
-    color: #FFE194;
+.here {
+    color: blue;
 }
 

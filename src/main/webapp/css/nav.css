@@ -26,13 +26,20 @@ body {
     column-gap: 20px;
     font-size: 20px;
     font-family: Rockwell, sans-serif;
-    color: #E8F6EF;
+}
 
+.nav-items:hover {
+    color: inherit;
 }
 .nav-brand {
-    color: #E8F6EF;
     font-size: 50px;
+    color: black;
+}
 
+a, h4 {
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
 }
 
 

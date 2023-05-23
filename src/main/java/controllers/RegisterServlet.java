@@ -71,12 +71,18 @@ public class RegisterServlet extends HttpServlet {
             response.sendRedirect("/register");
         }
 
+        User existingUser = DaoFactory.getUsersDao().findByUsername(username);
+
+        if (existingUser != null && !username.isEmpty()) {
+            String msg = "This username is already being used";
+            request.getSession().setAttribute("userExists", msg);
+            request.getSession().setAttribute("error", "has");
+        }
+
         User user = new User(username, email, password, company);
 
         String hash = Password.hash(user.getPassword());
-
         user.setPassword(hash);
-
         DaoFactory.getUsersDao().insert(user);
 
         if (emailIsValid(email) && !email.isEmpty() && !username.isEmpty() && !password.isEmpty() && !passwordNoMatch ){
@@ -94,6 +100,5 @@ public class RegisterServlet extends HttpServlet {
         if (email == null)
             return false;
         return pat.matcher(email).matches();
-
     }
 }
