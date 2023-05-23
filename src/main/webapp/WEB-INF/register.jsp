@@ -5,7 +5,6 @@
 <head>
     <title>Register to JobSeeker</title>
     <link rel="stylesheet" href="/css/register.css">
-    <link rel="stylesheet" href="/css/nav.css">
 </head>
 <body>
 

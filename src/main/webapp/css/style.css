@@ -2,7 +2,6 @@
 /*JobSeeker Login page*/
 
 body {
-    background-color: #4C4C6D;
     font-family: 'Rockwell', sans-serif;
     font-size: 15px;
     font-weight: 400;
@@ -16,36 +15,10 @@ body {
     margin-top: 70px;
     align-items: center;
     justify-content: center;
-    background-color: #4C4C6D;
-}
-
-.form-group {
-    color: #E8F6EF;
-
-}
-
-.custom-button {
-    background-color: #1B9C85;
-    border: 2px solid white;
-}
-
-.custom-button:hover {
-    background-color:#FFE194;
-    color: black;
-    border: 2px solid white;
-}
-
-.register {
-    color: #E8F6EF;
-
 }
 
 .link {
     color: #E8F6EF;
-}
-
-a:hover {
-color: #FFE194;
 }
 
 :root {
@@ -54,10 +27,7 @@ color: #FFE194;
     --color-3: #E8F6EF;
     --color-4: #FFE194;
 }
-body{
-    background-color: var(--color-1);
 
-}
 .editBtn, .deleteBtn, .editProfileBtn{
     background-color: var(--color-2);
     color: white;

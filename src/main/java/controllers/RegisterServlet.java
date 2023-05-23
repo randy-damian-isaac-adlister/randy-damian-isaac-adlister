@@ -82,9 +82,7 @@ public class RegisterServlet extends HttpServlet {
         User user = new User(username, email, password, company);
 
         String hash = Password.hash(user.getPassword());
-
         user.setPassword(hash);
-
         DaoFactory.getUsersDao().insert(user);
 
         if (emailIsValid(email) && !email.isEmpty() && !username.isEmpty() && !password.isEmpty() && !passwordNoMatch ){
