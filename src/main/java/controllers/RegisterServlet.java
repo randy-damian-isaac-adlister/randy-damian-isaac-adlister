@@ -36,6 +36,8 @@ public class RegisterServlet extends HttpServlet {
         request.getSession().removeAttribute("noMatch");
         request.getSession().removeAttribute("emailError");
 
+        User existingUser = DaoFactory.getUsersDao().findByUsername(username);
+
         if (email.isEmpty()) {
             String msg = "Email field must be filled";
             request.getSession().setAttribute("emptyEmail", msg);
@@ -67,11 +69,9 @@ public class RegisterServlet extends HttpServlet {
             request.getSession().setAttribute("error", "has");
         }
 
-        if (!emailIsValid(email) || email.isEmpty() || username.isEmpty() || password.isEmpty() || passwordNoMatch ){
+        if (!emailIsValid(email) || email.isEmpty() || username.isEmpty() || password.isEmpty() || passwordNoMatch || existingUser != null){
             response.sendRedirect("/register");
         }
-
-        User existingUser = DaoFactory.getUsersDao().findByUsername(username);
 
         if (existingUser != null && !username.isEmpty()) {
             String msg = "This username is already being used";
@@ -79,7 +79,7 @@ public class RegisterServlet extends HttpServlet {
             request.getSession().setAttribute("error", "has");
         }
 
-        if (emailIsValid(email) && !email.isEmpty() && !username.isEmpty() && !password.isEmpty() && !passwordNoMatch ){
+        if (emailIsValid(email) && !email.isEmpty() && !username.isEmpty() && !password.isEmpty() && !passwordNoMatch && existingUser == null){
             User user = new User(username, email, password, company);
             String hash = Password.hash(user.getPassword());
             user.setPassword(hash);
