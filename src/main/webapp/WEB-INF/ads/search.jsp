@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/layout.css">
 </head>
 <body>
+<jsp:include page="/WEB-INF/partials/navbar.jsp" />
 <div class="page-wrapper">
     <div class="container">
         <div class="row">
