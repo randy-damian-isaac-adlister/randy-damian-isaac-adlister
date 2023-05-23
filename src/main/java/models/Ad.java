@@ -23,6 +23,17 @@ public class Ad {
         this.description = description;
     }
 
+    public Ad(long id, long userId, String title, String location, String salary, String jobType, String shift, String description) {
+        this.id = id;
+        this.userId = userId;
+        this.title = title;
+        this.location = location;
+        this.salary = salary;
+        this.job_type = jobType;
+        this.shift = shift;
+        this.description = description;
+    }
+
     public String getLocation() {
         return location;
     }
@@ -55,8 +66,7 @@ public class Ad {
         this.shift = shift;
     }
 
-    public Ad(long id, long userId, String title, String location, String salary, String job_type, String shift, String description) {
-        this.id = id;
+    public Ad(long userId, String title, String location, String salary, String job_type, String shift, String description) {
         this.userId = userId;
         this.title = title;
         this.location = location;

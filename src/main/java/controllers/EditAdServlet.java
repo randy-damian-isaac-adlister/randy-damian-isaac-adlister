@@ -14,7 +14,6 @@ import java.io.IOException;
 public class EditAdServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        System.out.println(req.getParameter("ad-id"));
         Ad ad = DaoFactory.getAdsDao().findAdById(Long.parseLong(req.getParameter("ad-id")));
         ad.setTitle(req.getParameter("title"));
         ad.setLocation(req.getParameter("location"));

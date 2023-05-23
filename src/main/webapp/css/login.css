@@ -1,39 +1,102 @@
 /*JobSeeker Login page*/
 
 body {
-    background-color: #FFE194;
     font-family: 'Rockwell', sans-serif;
     font-size: 15px;
     font-weight: 400;
     line-height: 1.5;
-    color: #E8F6EF;
+
     -webkit-font-smoothing: antialiased;
 }
 
+.page-wrapper {
+    align-items: center;
+    justify-content: center;
+}
+
 .form-group {
-    color: #E8F6EF;
+    display: flex;
+    flex-direction: column;
 }
 
 .custom-button {
     background-color: #1B9C85;
     border-color: #FFE194;
+    color: #E8F6EF;
+    padding: 10px;
 }
 
 .custom-button:hover {
     background-color:#FFE194;
     border-color: #E8F6EF;
-}
-
-.register {
-    color: #E8F6EF;
+    color: #0a0a0a;
 
 }
 
-.link {
-    color: #E8F6EF;
+.column.login {
+    border: 1px solid black;
+    width: 550px;
+    height: 350px;
+    row-gap: 10px;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    background-color: rgba(27, 156, 133);
+    box-shadow: 6px 6px 20px 6px black;
+    border-radius: 8px;
 }
 
-a:hover {
-    color: #FFE194;
+.login-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 10px;
+}
+
+.login-form > span {
+    margin-top: 0;
+    color: rgba(0, 0, 0, 0.4);
+    font-size: 13px;
+}
+
+.form-group > label {
+    font-size: 13px;
+}
+
+.form-group > input {
+    width: 350px;
+    border: 1px solid black;
+    height: 35px;
+    border-radius: 6px;
+    font-size: 15px;
+    background-color: rgba(27, 156, 133, 0.1);
+    box-shadow: 2px 2px 4px black;
+}
+
+.form-group > input:active {
+    background-color: rgba(27, 156, 133, 0.1);
+}
+.form-group > input:focus {
+    outline: none;
+    background-color: rgba(27, 156, 133, 0.1);
+    -webkit-appearance: none;
+}
+
+
+.login-btn {
+    width: 200px;
+    height: 40px;
+    background-color: #4C4C6D;
+    border: 1px solid black;
+    border-radius: 8px;
+    box-shadow: 2px 2px 4px black;
+    margin-top: 10px;
+    cursor: pointer;
+    color: white;
+
+}
+
+.here {
+    color: blue;
 }
 
