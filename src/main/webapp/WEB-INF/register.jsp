@@ -14,6 +14,7 @@
             <div class="error ${sessionScope.error}">
                 <p>${sessionScope.emailError}</p>
                 <p>${sessionScope.emptyUsername}</p>
+                <p>${sessionScope.userExists}</p>
                 <p>${sessionScope.emptyEmail}</p>
                 <p>${sessionScope.emptyPassword}</p>
                 <p>${sessionScope.noMatch}</p>
