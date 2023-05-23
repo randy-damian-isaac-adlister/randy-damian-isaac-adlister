@@ -5,22 +5,21 @@
     --color-4: #FFE194;
 }
 
-body {
+.bg {
     background-color: var(--color-1);
-    color: var(--color-1);
 }
 
 .container {
-    background-color: var(--color-4);
+    background-color: var(--color-2);
     padding: 20px;
     border-radius: 5px;
+    box-shadow: 2px 2px 10px 2px #2c2b2b;
     width: 400px;
-    margin: 50px auto 0;
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+    margin: 50px auto;
 }
 
 h1 {
-    color: var(--color-2);
+    color: black;
     text-align: center;
     margin-bottom: 30px;
 }
@@ -32,7 +31,7 @@ h1 {
 label {
     display: block;
     font-weight: bold;
-    color: var(--color-2);
+    color: black;
 }
 
 input{
@@ -40,6 +39,7 @@ input{
     padding: 10px;
     border-radius: 3px;
     border: 1px solid var(--color-1);
+    box-shadow: 2px 2px 10px 2px #2c2b2b;
     transition: border-color 0.3s ease;
 }
 
@@ -50,6 +50,7 @@ textarea {
     padding: 10px;
     border-radius: 3px;
     border: 1px solid var(--color-1);
+    box-shadow: 2px 2px 10px 2px #2c2b2b;
     transition: border-color 0.3s ease;
 }
 
@@ -61,7 +62,7 @@ textarea:focus {
 }
 
 select {
-    appearance: none;
+
     background-position: right 8px center;
     background-size: 12px 8px;
     padding-right: 25px;
@@ -77,11 +78,18 @@ textarea {
     padding: 10px;
     border: none;
     border-radius: 3px;
-    color: #fff;
+    color: var(--color-3);
     font-weight: bold;
     cursor: pointer;
 }
 
 .btn-primary {
-    background-color: var(--color-2);
+    background-color: var(--color-1);
+}
+.createAd-image{
+    height: 350px;
+    border: 1px solid black;
+    box-shadow: 2px 2px 10px 2px #2c2b2b;
+    width: 100%;
+    margin-bottom: 20px;
 }

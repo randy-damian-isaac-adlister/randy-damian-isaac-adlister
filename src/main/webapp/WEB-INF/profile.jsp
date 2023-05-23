@@ -45,7 +45,7 @@
                         <div class="ad-wrapper" data-id="${ad.id}">
                             <h2 class="ad-title">${ad.title}</h2>
                             <div class="row">
-                                <p>Location</p>
+                                <p>Location:</p>
                                 <p class="ad-location">${ad.location}</p>
                             </div>
                             <div class="row">
@@ -61,11 +61,14 @@
                                 <p class="ad-shift">${ad.shift}</p>
                             </div>
                             <div class="row">
-                                <p>Description</p>
+                                <p>Description:</p>
                                 <p class="ad-description">${ad.description}</p>
                             </div>
-                            <button class="editBtn">Edit</button>
-                            <button class="deleteBtn">Delete</button>
+                            <div class="row justify-center gap-10">
+                                <button class="editBtn">Edit</button>
+                                <button class="deleteBtn">Delete</button>
+                            </div>
+
                         </div>
                     </c:forEach>
                 </div>
@@ -101,7 +104,7 @@
                     </div>
                 </div>
             </div>
-            <div class="column align-right">
+            <div class="column align-right shrink account-outline">
                 <div class="account-wrapper">
                     <div class="account-title-wrapper">
                         <h2 class="account-title">My Account</h2>
