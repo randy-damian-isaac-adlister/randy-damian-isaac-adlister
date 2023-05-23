@@ -12,6 +12,8 @@ body, h1, h2, p {
 .page-wrapper {
     width: 50%;
     margin: 50px;
+    background-color: #4C4C6D;
+
 }
 
 .container {
