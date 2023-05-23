@@ -30,7 +30,7 @@
             </div>
             <div class="form-group">
                 <label for="type">Type</label>
-                <input id="type" name="type" type="text">
+                <input id="type" name="job_type" type="text">
             </div>
             <div class="form-group">
                 <label for="shift">Shift</label>

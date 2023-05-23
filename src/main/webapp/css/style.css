@@ -8,6 +8,7 @@ body {
     line-height: 1.5;
     color: #656b67;
     -webkit-font-smoothing: antialiased;
+    background-color: #4C4C6D;
 }
 
 .container {

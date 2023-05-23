@@ -58,7 +58,6 @@ public class MySQLAdsDao implements Ads {
 
     private Ad extractAd(ResultSet rs) throws SQLException {
         return new Ad(
-
             rs.getLong("id"),
             rs.getLong("user_id"),
             rs.getString("title"),
@@ -67,8 +66,6 @@ public class MySQLAdsDao implements Ads {
             rs.getString("job_type"),
             rs.getString("shift"),
             rs.getString("description")
-
-
         );
     }
 
@@ -169,14 +166,14 @@ public class MySQLAdsDao implements Ads {
     public void editAd(Ad ad) {
         PreparedStatement stmt = null;
         try {
-            stmt = connection.prepareStatement("UPDATE jobs SET title = ?, location = ?, salary = ?, job_type = ?, shift = ?, description = ? WHERE user_id = ?");
+            stmt = connection.prepareStatement("UPDATE jobs SET title = ?, location = ?, salary = ?, job_type = ?, shift = ?, description = ? WHERE id = ?");
             stmt.setString(1, ad.getTitle());
             stmt.setString(2, ad.getLocation());
             stmt.setString(3, ad.getSalary());
             stmt.setString(4, ad.getJob_type());
             stmt.setString(5, ad.getShift());
             stmt.setString(6, ad.getDescription());
-            stmt.setLong(7, ad.getUserId());
+            stmt.setLong(7, ad.getId());
             stmt.executeUpdate();
         } catch (SQLException e) {
             throw new RuntimeException("Error retrieving all ads.", e);

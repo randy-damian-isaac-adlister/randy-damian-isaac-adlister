@@ -13,7 +13,7 @@
 <body>
 <jsp:include page="/WEB-INF/partials/navbar.jsp"/>
 
-<div class="page-wrapper">
+<div class="page-wrapper bg">
     <div class="container">
         <div class="row">
             <div class="banner">
