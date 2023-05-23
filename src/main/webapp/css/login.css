@@ -5,6 +5,7 @@ body {
     font-size: 15px;
     font-weight: 400;
     line-height: 1.5;
+
     -webkit-font-smoothing: antialiased;
 }
 
@@ -21,11 +22,15 @@ body {
 .custom-button {
     background-color: #1B9C85;
     border-color: #FFE194;
+    color: #E8F6EF;
+    padding: 10px;
 }
 
 .custom-button:hover {
     background-color:#FFE194;
     border-color: #E8F6EF;
+    color: #0a0a0a;
+
 }
 
 .column.login {
@@ -77,6 +82,7 @@ body {
     -webkit-appearance: none;
 }
 
+
 .login-btn {
     width: 200px;
     height: 40px;
@@ -87,6 +93,7 @@ body {
     margin-top: 10px;
     cursor: pointer;
     color: white;
+
 }
 
 .here {
